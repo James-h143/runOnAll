@@ -35,7 +35,7 @@ async function main(args){
     for(let i=0;i<users.length;i++){
         user = users[i];
         try{
-            await execute(`ssh -t -oStrictHostKeyChecking=no ${user} ${command}`);
+            await execute(`ssh -oStrictHostKeyChecking=no ${user} ${command}`);
         }
         catch(e){
             console.log(e);
